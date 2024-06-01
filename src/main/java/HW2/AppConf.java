@@ -1,4 +1,4 @@
-package HW1;
+package HW2;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.annotation.Bean;

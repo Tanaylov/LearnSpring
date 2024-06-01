@@ -1,4 +1,4 @@
-package HW1;
+package HW2;
 
 import lombok.Data;
 
