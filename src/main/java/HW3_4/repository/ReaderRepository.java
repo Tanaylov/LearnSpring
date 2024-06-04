@@ -1,6 +1,6 @@
-package HW3.repository;
+package HW3_4.repository;
 
-import HW3.model.Reader;
+import HW3_4.model.Reader;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 

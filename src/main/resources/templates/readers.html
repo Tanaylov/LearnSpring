@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List</title>
+</head>
+<body>
+<h1 th:text="${header}"></h1><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>On hand</th>
+<!--        <th>Book on hand</th>-->
+        <th>Books</th>
+    </tr>
+    <tr th:each="reader : ${readers}">
+        <td th:text="${reader.getID()}"></td>
+        <td>
+            <a th:href="@{/issue/all/reader_id?id={id}(id=${reader.getID()})}"
+               th:text="${reader.getNAME()}">
+            </a>
+        </td>
+        <td>
+<!--            http://localhost:8080/book/id?id=#{reader.getBookOnHand().getID()}
+                пришлось писатьотдельный метод-->
+            <a th:href="@{http://localhost:8080/book/id?id={id}(id=${reader.getBookId()})}"
+               th:text="${reader.isOnHand()}"></a>
+        </td>
+        <td>
+            <a th:href="@{/table/readers/{id}/book (id=${reader.getID()})}">link</a>
+        </td>
+<!--        <td th:text="${reader.getBookOnHand()}"></td>-->
+<!--        <td th:text="${reader.getBookOnHand().getNAME()}"></td>-->
+    </tr>
+</table>
+</body>
+</html>

@@ -1,13 +1,13 @@
-package HW3.service;
+package HW3_4.service;
 
-import HW3.ZeroCopyOfBookException;
-import HW3.controller.IssueRequest;
-import HW3.model.Book;
-import HW3.model.Issue;
-import HW3.model.Reader;
-import HW3.repository.BookRepository;
-import HW3.repository.IssueRepository;
-import HW3.repository.ReaderRepository;
+import HW3_4.ZeroCopyOfBookException;
+import HW3_4.controller.IssueRequest;
+import HW3_4.model.Book;
+import HW3_4.model.Issue;
+import HW3_4.model.Reader;
+import HW3_4.repository.BookRepository;
+import HW3_4.repository.IssueRepository;
+import HW3_4.repository.ReaderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +18,8 @@ import java.util.NoSuchElementException;
 @RequiredArgsConstructor
 public class IssueService {
     private final IssueRepository issueRepository;
-    private final ReaderRepository readerRepository;
     private final BookRepository bookRepository;
+    private final ReaderRepository readerRepository;
 
     public Issue issue(IssueRequest request) throws ZeroCopyOfBookException {
         long bookIDFromRequest = request.getBookID();
@@ -42,6 +42,7 @@ public class IssueService {
         Issue newIssue = new Issue(readerIDFromRequest, bookIDFromRequest);
         issueRepository.saveIssue(newIssue);
         readerFromRequest.setOnHand(true);
+        readerFromRequest.setBookOnHand(bookFromRequest);
         bookFromRequest.setCopyQuantity(bookFromRequest.getCopyQuantity() - 1);
         return  newIssue;
     }
@@ -53,7 +54,9 @@ public class IssueService {
         else if (closingIssue.getReturnAt() != null)
             throw new IllegalArgumentException(String.format("Issue with id: %d already closed", id));
         closingIssue.setReturnAt(LocalDateTime.now());
-        readerRepository.getReaderById(closingIssue.getREADER_ID()).setOnHand(false);
+        Reader readerById = readerRepository.getReaderById(closingIssue.getREADER_ID());
+        readerById.setOnHand(false);
+        readerById.setBookOnHand(null);
         Book bookById = bookRepository.getBookById(closingIssue.getBOOK_ID());
         bookById.setCopyQuantity(bookById.getCopyQuantity() + 1);
         return closingIssue;

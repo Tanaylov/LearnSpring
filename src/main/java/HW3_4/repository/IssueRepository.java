@@ -1,6 +1,6 @@
-package HW3.repository;
+package HW3_4.repository;
 
-import HW3.model.Issue;
+import HW3_4.model.Issue;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
-package HW3.controller;
+package HW3_4.controller;
 
-import HW3.model.Book;
-import HW3.repository.BookRepository;
+import HW3_4.model.Book;
+import HW3_4.repository.BookRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

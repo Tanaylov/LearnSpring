@@ -1,7 +1,7 @@
-package HW3.controller;
+package HW3_4.controller;
 
-import HW3.model.Reader;
-import HW3.repository.ReaderRepository;
+import HW3_4.model.Reader;
+import HW3_4.repository.ReaderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

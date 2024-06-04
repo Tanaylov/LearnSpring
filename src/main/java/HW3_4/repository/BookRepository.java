@@ -1,6 +1,6 @@
-package HW3.repository;
+package HW3_4.repository;
 
-import HW3.model.Book;
+import HW3_4.model.Book;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;

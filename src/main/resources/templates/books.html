@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List</title>
+</head>
+<body>
+<h1 th:text="${header}"></h1><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Copy quantity</th>
+    </tr>
+    <tr th:each="book : ${books}">
+        <td th:text="${book.getID()}"></td>
+        <td th:text="${book.getNAME()}"></td>
+        <td th:text="${book.getCopyQuantity()}"></td>
+    </tr>
+</table>
+</body>
+</html>

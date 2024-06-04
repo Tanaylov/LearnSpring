@@ -1,4 +1,4 @@
-package HW3.controller;
+package HW3_4.controller;
 
 import lombok.Data;
 

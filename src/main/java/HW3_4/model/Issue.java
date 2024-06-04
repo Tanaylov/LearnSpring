@@ -1,4 +1,4 @@
-package HW3.model;
+package HW3_4.model;
 
 import lombok.Data;
 

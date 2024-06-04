@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List</title>
+</head>
+<body>
+<h1 th:text="${header}"></h1><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Reader ID</th>
+        <th>Book ID</th>
+        <th>Issue at</th>
+        <th>Return at</th>
+    </tr>
+
+    <tr th:each="issue : ${issues}">
+        <td th:text="${issue.getID()}"></td>
+        <td>
+            <a th:href="@{/reader/id/{id}(id=${issue.getREADER_ID()})}"
+               th:text="${issue.getREADER_ID()}">
+            </a>
+        </td>
+        <td>
+            <a th:href="@{/book/id?id={id}(id=${issue.getBOOK_ID()})}"
+               th:text="${issue.getBOOK_ID()}">
+            </a>
+        </td>
+        <td th:text="${issue.getISSUE_AT()}"></td>
+        <td th:text="${issue.getReturnAt()}"></td>
+    </tr>
+</table>
+</body>
+</html>
