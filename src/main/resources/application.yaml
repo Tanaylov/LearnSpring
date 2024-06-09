@@ -1,0 +1,9 @@
+#spring.application.name=demo
+#book.copy=3
+
+spring:
+  datasource:
+    url: jdbc:mysql://root@localhost:3306/spring_hw #?createDatabaseIfNotExist=true
+    name: root
+    password: root_Ivan1357
+    driver-class-name: com.mysql.cj.jdbc.Driver
