@@ -1,7 +1,7 @@
-package HW5.service;
+package HW5_6.service;
 
-import HW5.model.Reader;
-import HW5.repository.ReaderRepository;
+import HW5_6.model.Reader;
+import HW5_6.repository.ReaderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

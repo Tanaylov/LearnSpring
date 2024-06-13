@@ -1,8 +1,5 @@
-package HW5;
+package HW5_6;
 
-import HW5.model.Book;
-import HW5.model.Reader;
-import HW5.repository.ReaderRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -16,7 +13,7 @@ public class AppHW5 {
 //
 //        Reader reader = new Reader();
 //        reader.setName("Ivan");
-        Book b1 = new Book();
+//        Book b1 = new Book();
 //        readerRepository.save(reader);
     }
 }

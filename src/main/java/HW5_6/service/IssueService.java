@@ -1,10 +1,9 @@
-package HW5.service;
+package HW5_6.service;
 
-import HW5.model.Book;
-import HW5.model.Issue;
-import HW5.model.Reader;
-import HW5.repository.IssueRepository;
-import HW5.repository.ReaderRepository;
+import HW5_6.model.Book;
+import HW5_6.model.Issue;
+import HW5_6.model.Reader;
+import HW5_6.repository.IssueRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

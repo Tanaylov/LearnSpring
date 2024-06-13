@@ -1,8 +1,10 @@
-package HW5.service;
+package HW5_6.service;
 
-import HW5.model.Book;
-import HW5.repository.BookRepository;
+import HW5_6.model.Book;
+import HW5_6.properties.BookProperties;
+import HW5_6.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,11 +12,16 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@EnableConfigurationProperties(BookProperties.class)
 public class BookService {
 
     private final BookRepository bookRepository;
+    private final BookProperties bookProperties;
 
     public Book addNewBook (Book newBook) {
+        if (newBook.getCopyQuantity() < 1)
+            newBook.setCopyQuantity(bookProperties.getCopyQuantity());
+
         return bookRepository.save(newBook);
     }
     public Optional<Book> getBookById(long id) {

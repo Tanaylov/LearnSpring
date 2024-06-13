@@ -1,9 +1,9 @@
-package HW5.controller;
+package HW5_6.controller;
 
-import HW5.model.Issue;
-import HW5.service.IssueService;
+import HW5_6.model.Issue;
+import HW5_6.service.IssueService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +12,7 @@ import java.util.NoSuchElementException;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "/issue")
+@Tag(name = "Issue", description = "Operations of issuing books and receiving them from readers")
 public class IssueController {
 
     private final IssueService issueService;

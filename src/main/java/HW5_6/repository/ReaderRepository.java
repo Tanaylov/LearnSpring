@@ -1,10 +1,9 @@
-package HW5.repository;
+package HW5_6.repository;
 
-import HW5.model.Reader;
+import HW5_6.model.Reader;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ReaderRepository extends JpaRepository<Reader, Long> {
 

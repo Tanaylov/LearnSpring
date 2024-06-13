@@ -1,10 +1,9 @@
-package HW5.repository;
+package HW5_6.repository;
 
-import HW5.model.Issue;
+import HW5_6.model.Issue;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
