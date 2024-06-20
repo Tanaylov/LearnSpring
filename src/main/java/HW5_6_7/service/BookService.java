@@ -1,8 +1,8 @@
-package HW5_6.service;
+package HW5_6_7.service;
 
-import HW5_6.model.Book;
-import HW5_6.properties.BookProperties;
-import HW5_6.repository.BookRepository;
+import HW5_6_7.model.Book;
+import HW5_6_7.properties.BookProperties;
+import HW5_6_7.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;

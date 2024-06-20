@@ -1,6 +1,6 @@
-package HW5_6.repository;
+package HW5_6_7.repository;
 
-import HW5_6.model.Book;
+import HW5_6_7.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

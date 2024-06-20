@@ -1,7 +1,7 @@
-package HW5_6.controller;
+package HW5_6_7.controller;
 
-import HW5_6.model.Issue;
-import HW5_6.service.IssueService;
+import HW5_6_7.model.Issue;
+import HW5_6_7.service.IssueService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

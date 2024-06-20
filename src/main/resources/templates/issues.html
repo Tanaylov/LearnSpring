@@ -19,18 +19,18 @@
     </tr>
 
     <tr th:each="issue : ${issues}">
-        <td th:text="${issue.getID()}"></td>
+        <td th:text="${issue.getId()}"></td>
         <td>
-            <a th:href="@{/reader/id/{id}(id=${issue.getREADER_ID()})}"
-               th:text="${issue.getREADER_ID()}">
+            <a th:href="@{/reader/id/{id}(id=${issue.getReaderId()})}"
+               th:text="${issue.getReaderId()}">
             </a>
         </td>
         <td>
-            <a th:href="@{/book/id?id={id}(id=${issue.getBOOK_ID()})}"
-               th:text="${issue.getBOOK_ID()}">
+            <a th:href="@{/book/id?id={id}(id=${issue.getBookId()})}"
+               th:text="${issue.getBookId()}">
             </a>
         </td>
-        <td th:text="${issue.getISSUE_AT()}"></td>
+        <td th:text="${issue.getIssueAt()}"></td>
         <td th:text="${issue.getReturnAt()}"></td>
     </tr>
 </table>

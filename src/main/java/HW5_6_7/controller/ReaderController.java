@@ -1,7 +1,7 @@
-package HW5_6.controller;
+package HW5_6_7.controller;
 
-import HW5_6.model.Reader;
-import HW5_6.service.ReaderService;
+import HW5_6_7.model.Reader;
+import HW5_6_7.service.ReaderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

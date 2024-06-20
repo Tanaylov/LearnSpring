@@ -1,13 +1,14 @@
-package HW5_6.service;
+package HW5_6_7.service;
 
-import HW5_6.model.Book;
-import HW5_6.model.Issue;
-import HW5_6.model.Reader;
-import HW5_6.repository.IssueRepository;
+import HW5_6_7.model.Book;
+import HW5_6_7.model.Issue;
+import HW5_6_7.model.Reader;
+import HW5_6_7.repository.IssueRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -54,4 +55,7 @@ public class IssueService {
     }
 
 
+    public List<Issue> getAll() {
+        return issueRepository.findAll();
+    }
 }

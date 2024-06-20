@@ -1,6 +1,6 @@
-package HW5_6.repository;
+package HW5_6_7.repository;
 
-import HW5_6.model.Issue;
+import HW5_6_7.model.Issue;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

@@ -1,4 +1,4 @@
-package HW5_6.model;
+package HW5_6_7.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
@@ -20,4 +20,11 @@ public class Reader {
     @Column(name = "on_hand")
     @Schema(name = "Have book on hand")
     private Boolean onHand = false;
+
+    @Column(name = "password")
+    private String pass;
+
+//    @Column(name = "roles")
+    @Transient
+    private String authRole = "reader";
 }

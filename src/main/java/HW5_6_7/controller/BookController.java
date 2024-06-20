@@ -1,7 +1,7 @@
-package HW5_6.controller;
+package HW5_6_7.controller;
 
-import HW5_6.model.Book;
-import HW5_6.service.BookService;
+import HW5_6_7.model.Book;
+import HW5_6_7.service.BookService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

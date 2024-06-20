@@ -1,4 +1,4 @@
-package HW5_6.model;
+package HW5_6_7.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
