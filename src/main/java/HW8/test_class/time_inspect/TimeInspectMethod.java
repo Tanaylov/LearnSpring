@@ -16,6 +16,8 @@ public class TimeInspectMethod {
         return timeInspects;
     }
 
-
+    public String emptyMethod() {
+        return "do nothing";
+    }
 
 }
