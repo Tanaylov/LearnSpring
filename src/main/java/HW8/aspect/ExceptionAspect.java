@@ -28,6 +28,12 @@ public class ExceptionAspect {
         } catch (Throwable e) {
             if (exceptions.contains(e.getClass()))
                 throw new RuntimeException("Exception is in annotation list");
+
+            exceptions.forEach(exception -> {
+                if (exception.isAssignableFrom(e.getClass()))
+                    throw new RuntimeException("Exception's child from annotation list");
+            });
+
             String returnTypeName = ((MethodSignature) pjp.getSignature()).getReturnType().getName();
             if (returnTypeName.contains("."))
                 return null;

@@ -6,14 +6,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestExceptionAnnotation {
 
-    @RecoverException(noRecoverFor = IllegalArgumentException.class)
+//    @RecoverException(noRecoverFor = IllegalArgumentException.class)
     public String returnParameter(String parameter) {
         if (parameter.equals(""))
             throw new IllegalArgumentException();
         return parameter;
     }
 
-    @RecoverException
+    @RecoverException(noRecoverFor = RuntimeException.class)
     public long getParameterNumber(int number) {
         if (number == 0)
             throw new IllegalArgumentException();

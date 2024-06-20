@@ -24,7 +24,7 @@ public class AspectRunner {
         System.out.println(timeInspectClass.fibonacciStream(7));
         System.out.println("-".repeat(100));
         System.out.println(testExceptionAnnotation.returnParameter("param"));
-        System.out.println(testExceptionAnnotation.returnParameter(""));
+//        System.out.println(testExceptionAnnotation.returnParameter(""));
         System.out.println("-".repeat(100));
         System.out.println(testExceptionAnnotation.getParameterNumber(5));
         System.out.println(testExceptionAnnotation.getParameterNumber(0));
