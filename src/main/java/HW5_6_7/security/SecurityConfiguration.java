@@ -22,9 +22,9 @@ public class SecurityConfiguration {
 
         return http
                 .authorizeHttpRequests(registry -> registry
-                        .requestMatchers("/page/reader/**").hasAuthority("admin")
                         .requestMatchers("/page/book/**").hasAuthority("reader")
                         .requestMatchers("/page/reader/{userId}/**").access(currentUser)
+                        .requestMatchers("/page/reader/**").hasAuthority("admin")
                         .anyRequest().denyAll())
                 .formLogin(Customizer.withDefaults())
                 .build();
