@@ -3,10 +3,7 @@ package HW5_6_7;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.security.core.context.SecurityContextHolder;
 
-import java.security.Security;
-import HW5_6_7.model.Reader;
 
 @SpringBootApplication
 public class AppHW5_6_7 {

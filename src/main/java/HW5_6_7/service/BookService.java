@@ -19,7 +19,7 @@ public class BookService {
     private final BookProperties bookProperties;
 
     public Book addNewBook (Book newBook) {
-        if (newBook.getCopyQuantity() < 1)
+        if (newBook.getCopyQuantity() == null)
             newBook.setCopyQuantity(bookProperties.getCopyQuantity());
 
         return bookRepository.save(newBook);
